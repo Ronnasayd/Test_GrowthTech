@@ -1,9 +1,10 @@
 const express = require('express')
 const app = express()
+const userRouter = require('./Routes/userRouter')
 
-app.get('/', (req, res) => {
-  console.log('Hello World')
-  res.send('Hello World')
-})
+app.use(express.json())
+
+// Route for users
+app.use('/users', userRouter)
 
 app.listen(3000)
