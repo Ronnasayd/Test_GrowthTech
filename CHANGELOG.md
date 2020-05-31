@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/Ronnasayd/Test_GrowthTech/compare/v1.1.0...v1.2.0) (2020-05-31)
+
+
+### Features
+
+* **frontend:** add basic structure of react ([4e96602](https://github.com/Ronnasayd/Test_GrowthTech/commit/4e966025830cf4e5c018b28247afce4f97664150))
+
+
+### Bug Fixes
+
+* remove eslint test ([59aaab6](https://github.com/Ronnasayd/Test_GrowthTech/commit/59aaab6ab9386f883298ebec8018bedce16083f5))
+
 ## [1.1.0](https://github.com/Ronnasayd/Test_GrowthTech/compare/v1.0.1...v1.1.0) (2020-05-31)
 
 
