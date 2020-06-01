@@ -47,6 +47,7 @@ const handlePosts = async (req, res, next) => {
   });
   req.posts = posts;
   req.users = users;
+  req.groupUsers = groupUsers;
   req.groupPosts = groupPosts;
   next();
 };

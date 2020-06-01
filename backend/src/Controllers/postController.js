@@ -1,10 +1,7 @@
-const client = require("../Services/client");
-
 class PostController {
-  // return all posts
+  // return all filtered posts
   async index(req, res) {
     res.send(req.groupPosts);
   }
 }
-
 module.exports = new PostController();
