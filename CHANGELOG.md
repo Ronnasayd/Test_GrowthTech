@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.4.0](https://github.com/Ronnasayd/Test_GrowthTech/compare/v1.3.0...v1.4.0) (2020-06-01)
+
+
+### Features
+
+* **backend:** add cors ([0d9ad0d](https://github.com/Ronnasayd/Test_GrowthTech/commit/0d9ad0d868c8e024b77d2f8732ba266310fd305c))
+* **backend:** add users controller and route ([7de20b7](https://github.com/Ronnasayd/Test_GrowthTech/commit/7de20b7f952ea9f6ee2e3bca1697d714dbbd7833))
+
 ## [1.3.0](https://github.com/Ronnasayd/Test_GrowthTech/compare/v1.2.0...v1.3.0) (2020-06-01)
 
 
