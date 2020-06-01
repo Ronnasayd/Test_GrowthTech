@@ -1,12 +1,11 @@
 const express = require("express");
 const app = express();
-const userRouter = require("./Routes/userRouter");
 const postRouter = require("./Routes/postRouter");
+const handlePosts = require("./Middlewares/postMiddleware");
 
 app.use(express.json());
 
-// Route for users
-app.use("/users", userRouter);
+app.use(handlePosts);
 
 // Route for posts
 app.use("/posts", postRouter);
