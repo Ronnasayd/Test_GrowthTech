@@ -35,5 +35,5 @@ window.onload = () => {
   };
   setTimeout(() => {
     handleRipples();
-  }, 1000);
+  }, 500);
 };

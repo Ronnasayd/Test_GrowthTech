@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "../../components/Header";
-import UserList from "../../components/UserList";
+import PostList from "../../components/PostList";
 
 // import { Container } from './styles';
 
@@ -8,7 +8,7 @@ function Home() {
   return (
     <>
       <Header />
-      <UserList />
+      <PostList />
     </>
   );
 }
