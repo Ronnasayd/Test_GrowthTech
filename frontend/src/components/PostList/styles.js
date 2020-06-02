@@ -13,6 +13,7 @@ export const List = styled.ul`
   padding: 10px;
 `;
 export const ListItem = styled.li`
+  background: #fff;
   margin: 10px;
   padding: 30px;
   min-width: 280px;
@@ -20,10 +21,10 @@ export const ListItem = styled.li`
   border-radius: 4px;
   box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14),
     0 1px 5px 0 rgba(0, 0, 0, 0.12);
+
   opacity: 0;
   transform: scale(0);
   transition: all 0.5s linear;
-
   &.entry {
     opacity: 1;
     transform: scale(1);

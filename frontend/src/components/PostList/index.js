@@ -1,16 +1,15 @@
 import React, { useEffect } from "react";
-import { addRipple, addObservable } from "../../utils";
+import { addObservable } from "../../utils";
 import { Container, List, ListItem, ItemHeader, ItemContent } from "./styles";
 import { client } from "../../services/client";
 import { useState } from "react";
+import { useHistory } from "react-router-dom";
 
 function PostList() {
   const [posts, setPosts] = useState([]);
+  const history = useHistory();
 
   useEffect((e) => {
-    document.querySelectorAll(".ripple").forEach((element) => {
-      element.addEventListener("click", addRipple);
-    });
     const elements = document.querySelectorAll(".observer");
     addObservable(elements);
   });
@@ -26,7 +25,15 @@ function PostList() {
     <Container>
       <List>
         {posts.map((post) => (
-          <ListItem key={post.id} className="ripple observer">
+          <ListItem
+            key={post.id}
+            className="ripple observer"
+            onClick={() => {
+              setTimeout(() => {
+                history.push(`/user/${post.userId}`);
+              }, 500);
+            }}
+          >
             <ItemHeader>
               <p>{post.user.name}</p>
               <p>{post.user.company_name}</p>

@@ -16,10 +16,17 @@ html,body,#root{
 
 html{
   font-size:10px;
+  scroll-behavior:smooth;
+}
+body{
+  background:#065e80;
+  
+}
+a{
+  text-decoration:none;
 }
 
 #root{
-  background:#fff;
   font-family:sans-serif;
   color:rgba(0,0,0,0.87);
   display:flex;
@@ -29,7 +36,7 @@ html{
 
 .ripple {
   overflow: hidden;
-  position: relative;
+  /* position: absolute; */
   cursor: pointer;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   .ripple-child {

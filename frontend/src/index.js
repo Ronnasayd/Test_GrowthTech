@@ -1,11 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Home from "./pages/Home";
 import { GlobalStyle } from "./styles";
+import AppRouter from "./Router";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Home />
+    <AppRouter />
     <GlobalStyle />
   </React.StrictMode>,
   document.getElementById("root")
