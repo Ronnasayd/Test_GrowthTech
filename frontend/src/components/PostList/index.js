@@ -1,12 +1,19 @@
-import React from "react";
-
+import React, { useEffect } from "react";
+import { addRipple, addObservable } from "../../utils";
 import { Container, List, ListItem, ItemHeader, ItemContent } from "./styles";
-import { useEffect } from "react";
 import { client } from "../../services/client";
 import { useState } from "react";
 
 function PostList() {
   const [posts, setPosts] = useState([]);
+
+  useEffect((e) => {
+    document.querySelectorAll(".ripple").forEach((element) => {
+      element.addEventListener("click", addRipple);
+    });
+    const elements = document.querySelectorAll(".observer");
+    addObservable(elements);
+  });
 
   useEffect(() => {
     const getPosts = async () => {
@@ -19,7 +26,7 @@ function PostList() {
     <Container>
       <List>
         {posts.map((post) => (
-          <ListItem key={post.id} className="ripple">
+          <ListItem key={post.id} className="ripple observer">
             <ItemHeader>
               <p>{post.user.name}</p>
               <p>{post.user.company_name}</p>

@@ -10,8 +10,3 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById("root")
 );
-
-const script = document.createElement("script");
-script.src = "/ripple.js";
-script.async = true;
-document.body.appendChild(script);
