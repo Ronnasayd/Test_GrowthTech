@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.5.0](https://github.com/Ronnasayd/Test_GrowthTech/compare/v1.4.0...v1.5.0) (2020-06-02)
+
+
+### Features
+
+* **frontend:** add userdetail ([2e714be](https://github.com/Ronnasayd/Test_GrowthTech/commit/2e714bec600c664a29548e4a22de6908e35c96f0))
+
+
+### Bug Fixes
+
+* **backend:** change server port ([a51a03c](https://github.com/Ronnasayd/Test_GrowthTech/commit/a51a03cc6537393be0a2ad50aac4652a954f2099))
+
 ## [1.4.0](https://github.com/Ronnasayd/Test_GrowthTech/compare/v1.3.0...v1.4.0) (2020-06-01)
 
 
