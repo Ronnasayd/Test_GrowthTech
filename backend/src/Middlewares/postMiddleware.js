@@ -1,6 +1,6 @@
 const axios = require("axios");
 const NodeCache = require("node-cache");
-const postCache = new NodeCache({ stdTTL: 60 });
+const postCache = new NodeCache({ stdTTL: 5 * 60 });
 
 const handlePosts = async (req, res, next) => {
   // verify users request in cache

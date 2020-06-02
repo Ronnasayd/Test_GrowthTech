@@ -14,4 +14,4 @@ app.use(handlePosts);
 app.use("/posts", postRouter);
 // Route for users
 app.use("/users", userRouter);
-app.listen(3000);
+app.listen(3333);
