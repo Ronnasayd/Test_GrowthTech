@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Home from "../pages/Home";
+import Posts from "../pages/Posts";
+import Users from "../pages/Users";
 import UserDetail from "../pages/UserDetail";
 
 function AppRouter() {
@@ -8,10 +9,16 @@ function AppRouter() {
     <Router>
       <Switch>
         <Route exact={true} path="/">
-          <Home />
+          <Posts endpoint={"/posts/"} />
         </Route>
         <Route path="/user/:id">
           <UserDetail />
+        </Route>
+        <Route path="/general-posts/">
+          <Posts endpoint={"/posts/general"} />
+        </Route>
+        <Route path="/users/">
+          <Users />
         </Route>
       </Switch>
     </Router>

@@ -13,6 +13,7 @@ import { useParams } from "react-router-dom";
 import locationSVG from "../../assets/images/location.svg";
 import personSVG from "../../assets/images/person.svg";
 import SideMenu from "../../components/SideMenu";
+import Footer from "../../components/Footer";
 
 function UserDetail(props) {
   const { id } = useParams();
@@ -20,7 +21,7 @@ function UserDetail(props) {
   useEffect(() => {
     const getUser = async () => {
       const response = await client.get(`/users/${id}/`);
-      console.log(response.data);
+
       setUser(response.data[0]);
     };
     getUser();
@@ -108,6 +109,7 @@ function UserDetail(props) {
           </CompanyInfo>
         </Card>
       </Container>
+      <Footer />
     </>
   );
 }

@@ -12,10 +12,10 @@ export const Container = styled.div`
     position: relative;
     top: 0px;
     right: 0px;
-    /* transition: none; */
+    transition: none;
   }
   &.up {
-    top: 0px;
+    top: 10px;
   }
 `;
 export const ItemMenu = styled.div`

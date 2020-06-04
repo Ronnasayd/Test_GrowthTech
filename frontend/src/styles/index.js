@@ -1,6 +1,14 @@
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
+
+@font-face {
+  font-family: Roboto;
+  src: url("/fonts/Roboto-Regular.ttf");
+}
+
+
+
 *,body,html{
   margin:0;
   padding:0;
@@ -17,6 +25,7 @@ html,body,#root{
 html{
   font-size:10px;
   scroll-behavior:smooth;
+  
 }
 body{
   background-image: url("/texture.jpeg");
@@ -37,10 +46,11 @@ body{
 }
 a{
   text-decoration:none;
+  color:#00adee;
 }
 
 #root{
-  font-family:sans-serif;
+  font-family:Roboto,"sans-serif";
   color:rgba(0,0,0,0.87);
   display:flex;
   flex-direction:column;
@@ -90,6 +100,20 @@ a{
 
     100% {
       box-shadow: 0 0 0 20px rgba(0, 0, 0, 0);
+    }
+  }
+
+  .arise{
+    animation: arise 0.5s linear;
+    @keyframes arise{
+      0%{
+        opacity:0;
+        transform:scale(0)
+      }
+      100%{
+        opacity:1;
+        transform:scale(1)
+      }
     }
   }
 `;

@@ -54,6 +54,7 @@ export const Card = styled.div`
   h3 {
     color: #02202b;
     align-self: flex-end;
+    font-size: 1.7rem;
   }
   .user-name {
     text-align: center;

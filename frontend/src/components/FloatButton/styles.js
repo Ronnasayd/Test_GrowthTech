@@ -12,7 +12,12 @@ export const Container = styled.div`
   position: fixed;
   bottom: 20px;
   right: 30px;
+  transition: all 0.075s linear;
   @media screen and (max-width: 833px) {
     display: none;
+  }
+
+  &.up {
+    bottom: 95px;
   }
 `;

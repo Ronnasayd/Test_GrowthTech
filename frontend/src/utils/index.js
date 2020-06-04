@@ -7,8 +7,8 @@ export const addObservable = (elements) => {
           observer.unobserve(entry.target);
         }
       });
-    },
-    { root: null, rootMargin: "0px", threshold: 0.75 }
+    }
+    // { root: null, rootMargin: "0px", threshold: 0.75 }
   );
   elements.forEach((element) => observer.observe(element));
 };

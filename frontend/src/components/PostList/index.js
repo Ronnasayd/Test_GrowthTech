@@ -5,22 +5,28 @@ import { client } from "../../services/client";
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
 
-function PostList() {
+function PostList({ endpoint }) {
   const [posts, setPosts] = useState([]);
   const history = useHistory();
 
-  useEffect((e) => {
+  useEffect(() => {
     const elements = document.querySelectorAll(".observer");
+    elements.forEach((element) => {
+      element.classList.remove("entry");
+    });
+
     addObservable(elements);
   });
 
   useEffect(() => {
     const getPosts = async () => {
-      const response = await client.get("/posts");
+      const response = await client.get(endpoint);
+
       setPosts(response.data);
     };
+    window.scrollTo(0, 0);
     getPosts();
-  }, []);
+  }, [endpoint]);
   return (
     <Container>
       <List>
