@@ -1,8 +1,17 @@
 import React, { useEffect, useState } from "react";
 import Header from "../../components/Header";
 import { client } from "../../services/client";
-import { Container, Item } from "./styles";
+import {
+  Container,
+  Card,
+  Item,
+  PersonalInfo,
+  AddressInfo,
+  CompanyInfo,
+} from "./styles";
 import { useParams } from "react-router-dom";
+import locationSVG from "../../assets/images/location.svg";
+import personSVG from "../../assets/images/person.svg";
 
 function UserDetail(props) {
   const { id } = useParams();
@@ -10,6 +19,7 @@ function UserDetail(props) {
   useEffect(() => {
     const getUser = async () => {
       const response = await client.get(`/users/${id}/`);
+      console.log(response.data);
       setUser(response.data[0]);
     };
     getUser();
@@ -18,57 +28,77 @@ function UserDetail(props) {
     <>
       <Header />
       <Container>
-        <h3>User Info</h3>
+        <Card>
+          <div className="header">
+            <h3>User Info</h3>
+          </div>
+          <div className="user-name">
+            <span>{user.name}</span>
+            <span>@{user.username}</span>
+          </div>
+          <img
+            src={personSVG}
+            alt="location info"
+            className="icon-info person-icon"
+          />
+          <PersonalInfo>
+            <Item>
+              <span>Email:</span>
+              <span>{user.email}</span>
+            </Item>
+            <Item>
+              <span>Phone:</span>
+              <span>{user.phone}</span>
+            </Item>
+            <Item>
+              <span>Website:</span>
+              <span>{user.website}</span>
+            </Item>
+          </PersonalInfo>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href={`http://maps.google.com/maps?q=${user.address?.geo.lat},${user.address?.geo.lng}`}
+          >
+            <img src={locationSVG} alt="location" />
+          </a>
+          <AddressInfo>
+            <Item>
+              <span>Street:</span>
+              <span>{user.address?.street}</span>
+            </Item>
 
-        <div>
-          <span>{user.name}</span>
-          <span>@{user.username}</span>
-        </div>
-
-        <Item>
-          <span>Email:</span>
-          <span>{user.email}</span>
-        </Item>
-        <Item>
-          <span>Phone:</span>
-          <span>{user.phone}</span>
-        </Item>
-        <Item>
-          <span>Website:</span>
-          <span>{user.website}</span>
-        </Item>
-        <Item>
-          <span>Street:</span>
-          <span>{user.address?.street}</span>
-        </Item>
-
-        <Item>
-          <span>Suite:</span>
-          <span>{user.address?.suite}</span>
-        </Item>
-        <Item>
-          <span>City:</span>
-          <span>{user.address?.city}</span>
-        </Item>
-        <Item>
-          <span>Zipcode:</span>
-          <span>{user.address?.zipcode}</span>
-        </Item>
-      </Container>
-      <Container>
-        <h3>Company Info</h3>
-        <Item>
-          <span>Name:</span>
-          <span>{user.company?.name}</span>
-        </Item>
-        <Item>
-          <span>Catch Phrase:</span>
-          <span>{user.company?.catchPhrase}</span>
-        </Item>
-        <Item>
-          <span>Bs</span>
-          <span>{user.company?.bs}</span>
-        </Item>
+            <Item>
+              <span>Suite:</span>
+              <span>{user.address?.suite}</span>
+            </Item>
+            <Item>
+              <span>City:</span>
+              <span>{user.address?.city}</span>
+            </Item>
+            <Item>
+              <span>Zipcode:</span>
+              <span>{user.address?.zipcode}</span>
+            </Item>
+          </AddressInfo>
+        </Card>
+        <Card>
+          <h3>Company Info</h3>
+          <CompanyInfo>
+            <Item>
+              <span>Name:</span>
+              <span>{user.company?.name}</span>
+            </Item>
+            <Item>
+              <span>Phrase:</span>
+              <span>{user.company?.catchPhrase}</span>
+            </Item>
+            <Item>
+              <span>Bs</span>
+              <span>{user.company?.bs}</span>
+            </Item>
+          </CompanyInfo>
+        </Card>
       </Container>
     </>
   );

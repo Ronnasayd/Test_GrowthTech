@@ -19,8 +19,21 @@ html{
   scroll-behavior:smooth;
 }
 body{
-  background:#065e80;
+  background-image: url("/texture.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    /* background-color: #02202b; */
+    
   
+}
+.texture-cover{
+  position:fixed;
+      height:100%;
+      width:100%;
+      background:#02202bdb;
+      z-index:-1;
 }
 a{
   text-decoration:none;
