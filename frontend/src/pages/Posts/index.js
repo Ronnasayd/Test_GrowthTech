@@ -4,8 +4,9 @@ import PostList from "../../components/PostList";
 import FloatButton from "../../components/FloatButton";
 import { addRipple } from "../../utils";
 import SideMenu from "../../components/SideMenu";
+import Footer from "../../components/Footer";
 
-function Home() {
+function Posts(props) {
   useEffect(() => {
     addRipple();
   });
@@ -14,10 +15,11 @@ function Home() {
     <>
       <Header />
       <SideMenu />
-      <PostList />
+      <PostList endpoint={props.endpoint} />
       <FloatButton />
+      <Footer />
     </>
   );
 }
 
-export default Home;
+export default Posts;
