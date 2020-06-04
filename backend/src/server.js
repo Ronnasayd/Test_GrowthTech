@@ -3,12 +3,12 @@ const app = express();
 const cors = require("cors");
 const postRouter = require("./Routes/postRouter");
 const userRouter = require("./Routes/userRouter");
-const handlePosts = require("./Middlewares/postMiddleware");
+const handleData = require("./Middlewares/dataMiddleware");
 
 app.use(cors());
 app.use(express.json());
 
-app.use(handlePosts);
+app.use(handleData);
 
 // Route for posts
 app.use("/posts", postRouter);

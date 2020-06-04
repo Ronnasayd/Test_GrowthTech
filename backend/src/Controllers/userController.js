@@ -6,5 +6,8 @@ class UserController {
     });
     res.send(user);
   }
+  async index(req, res) {
+    res.send(req.users);
+  }
 }
 module.exports = new UserController();

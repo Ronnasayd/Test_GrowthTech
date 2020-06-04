@@ -2,7 +2,7 @@ const axios = require("axios");
 const NodeCache = require("node-cache");
 const postCache = new NodeCache({ stdTTL: 5 * 60 });
 
-const handlePosts = async (req, res, next) => {
+const handleData = async (req, res, next) => {
   // verify users request in cache
   if (postCache.get("users") === undefined) {
     // if not in cache make the request
@@ -45,10 +45,19 @@ const handlePosts = async (req, res, next) => {
     };
     return post;
   });
+  generalPosts = [...posts].map((post) => {
+    const user = users.filter((user) => {
+      return parseInt(user.id) === parseInt(post.userId);
+    })[0];
+    post.user = { company_name: user.company.name, name: user.name };
+    return post;
+  });
+
   req.posts = posts;
   req.users = users;
   req.groupUsers = groupUsers;
   req.groupPosts = groupPosts;
+  req.generalPosts = generalPosts;
   next();
 };
-module.exports = handlePosts;
+module.exports = handleData;
