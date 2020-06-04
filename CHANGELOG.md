@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.6.0](https://github.com/Ronnasayd/Test_GrowthTech/compare/v1.5.0...v1.6.0) (2020-06-04)
+
+
+### Features
+
+* **backend:** add users and general-posts routes ([b464fa9](https://github.com/Ronnasayd/Test_GrowthTech/commit/b464fa97a1733c75d4e3b194f089b7635c4e1d71))
+* **frontend:** add footer component ([8c990e0](https://github.com/Ronnasayd/Test_GrowthTech/commit/8c990e03e44b55c7729d829a646cca58290cf448))
+* **frontend:** add menu of links ([e8996bc](https://github.com/Ronnasayd/Test_GrowthTech/commit/e8996bc72ad6844ceecb75a6aec6e2c7a0443e5f))
+* **frontend:** add users and general posts pages ([8bbc4e6](https://github.com/Ronnasayd/Test_GrowthTech/commit/8bbc4e6514352a6e4635d2d0921c0711653f521a))
+* **frontend:** add users page ([e274f01](https://github.com/Ronnasayd/Test_GrowthTech/commit/e274f01110793cd4983a2e31b6403ab5c55f556d))
+
+
+### Bug Fixes
+
+* **frontend:** rename Home to Posts ([4378c23](https://github.com/Ronnasayd/Test_GrowthTech/commit/4378c23d0a59f0d794d366820828aa496b6b7737))
+
 ## [1.5.0](https://github.com/Ronnasayd/Test_GrowthTech/compare/v1.4.0...v1.5.0) (2020-06-02)
 
 
