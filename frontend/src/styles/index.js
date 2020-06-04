@@ -116,4 +116,18 @@ a{
       }
     }
   }
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #222;
+}
+::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius:2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00adee;;
+}
 `;
