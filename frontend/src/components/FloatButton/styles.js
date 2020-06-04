@@ -5,13 +5,13 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  width: 70px;
-  height: 70px;
+  width: 65px;
+  height: 65px;
   border-radius: 100%;
   background: #fff;
   position: fixed;
   bottom: 20px;
-  right: 20px;
+  right: 30px;
   @media screen and (max-width: 833px) {
     display: none;
   }

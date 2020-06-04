@@ -7,7 +7,7 @@ import linkedin from "../../assets/images/linkedin.svg";
 
 function Header() {
   return (
-    <Container>
+    <Container className="header">
       <Link to="/">
         <Logo src={logo} />
       </Link>
@@ -16,6 +16,7 @@ function Header() {
           href="https://github.com/Ronnasayd"
           target="_blank"
           rel="noopener noreferrer"
+          className="pulse"
         >
           <img src={github} alt="github" />
         </a>
@@ -23,6 +24,7 @@ function Header() {
           href="https://www.linkedin.com/in/ronnasayd/"
           target="_blank"
           rel="noopener noreferrer"
+          className="pulse"
         >
           <img src={linkedin} alt="linkedin" />
         </a>

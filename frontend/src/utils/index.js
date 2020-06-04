@@ -17,39 +17,49 @@ export const addRipple = () => {
   const interval = setInterval(() => {
     if (document.readyState === "complete") {
       clearInterval(interval);
+
       const ripples = document.querySelectorAll(".ripple");
 
       ripples.forEach((element) => {
         element.addEventListener("click", (e) => {
-          const targetPositionX = element.offsetLeft;
-          const targetPositionY = element.offsetTop;
-
-          const rippleSpan = document.createElement("span");
-          rippleSpan.setAttribute("class", "ripple-child");
-
           let size = element.offsetHeight;
           if (element.offsetHeight < element.offsetWidth) {
             size = element.offsetWidth;
           }
 
-          rippleSpan.style.width = `${size}px`;
-          rippleSpan.style.height = `${size}px`;
+          element.style.setProperty("--width", `${size}px`);
+          element.style.setProperty("--height", `${size}px`);
 
-          const positionX = e.pageX - targetPositionX - size / 2;
-          const positionY = e.pageY - targetPositionY - size / 2;
+          const positionX =
+            e.clientX - e.currentTarget.getBoundingClientRect().left - size / 2;
+          const positionY =
+            e.clientY - e.currentTarget.getBoundingClientRect().top - size / 2;
 
-          rippleSpan.style.top = `${positionY}px`;
-          rippleSpan.style.left = `${positionX}px`;
+          element.style.setProperty("--top", `${positionY}px`);
+          element.style.setProperty("--left", `${positionX}px`);
 
-          element.appendChild(rippleSpan);
+          element.classList.add("wave");
 
           element.addEventListener("animationend", (e) => {
-            if (element.lastElementChild === rippleSpan) {
-              // element.removeChild(rippleSpan);
-            }
+            element.classList.remove("wave");
           });
         });
       });
     }
   }, 100);
+};
+
+export const moveSideMenu = () => {
+  const header = document.querySelector(".header");
+  const sideMenu = document.querySelector(".side-menu");
+  const observer = new IntersectionObserver((entries) =>
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        sideMenu.classList.remove("up");
+      } else {
+        sideMenu.classList.add("up");
+      }
+    })
+  );
+  observer.observe(header);
 };

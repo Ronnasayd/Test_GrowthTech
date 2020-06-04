@@ -9,6 +9,7 @@ export const Container = styled.div`
   background: #fff;
   flex-wrap: wrap;
   align-items: center;
+  z-index: 1;
 
   @media screen and (max-width: 550px) {
     flex-direction: column;
@@ -25,19 +26,23 @@ export const Networks = styled.div`
   right: 20px;
   display: flex;
   align-items: center;
-  width: 100px;
+  width: 120px;
   justify-content: space-around;
-  img {
-    height: 35px;
-    animation: netAnimation 0.5s linear;
-    @keyframes netAnimation {
-      0% {
-        opacity: 0;
-        transform: scale(0);
-      }
-      100% {
-        opacity: 1;
-        transform: scale(1);
+  a {
+    border-radius: 100%;
+    img {
+      height: 35px;
+
+      animation: netAnimation 0.5s linear;
+      @keyframes netAnimation {
+        0% {
+          opacity: 0;
+          transform: scale(0);
+        }
+        100% {
+          opacity: 1;
+          transform: scale(1);
+        }
       }
     }
   }

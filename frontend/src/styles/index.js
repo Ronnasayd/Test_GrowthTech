@@ -45,22 +45,29 @@ a{
   display:flex;
   flex-direction:column;
   align-items:center;
+ 
 }
 
 .ripple {
-  overflow: hidden;
-  /* position: absolute; */
   cursor: pointer;
+  overflow: hidden;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  .ripple-child {
-    background: rgb(0,174,239);
-    position: absolute;
-    border-radius: 100%;
-    animation: rippleDrop 0.5s linear;
-    opacity: 0;
-  }
+  --top: 0px;
+  --left: 0px;
+  --height: 0px;
+  --width: 0px;
 }
-
+.ripple.wave::after {
+  content: "";
+  position: absolute;
+  border-radius: 100%;
+  background: #00adee;
+  width: var(--width);
+  height: var(--height);
+  top: var(--top);
+  left: var(--left);
+  animation: rippleDrop 0.6s linear;
+}
 @keyframes rippleDrop {
   100% {
     transform: scale(2);
@@ -72,4 +79,17 @@ a{
   }
 }
 
+.pulse:hover {
+    animation: pulse 1s infinite;
+  }
+
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0px rgba(0,173,238, 0.7);
+    }
+
+    100% {
+      box-shadow: 0 0 0 20px rgba(0, 0, 0, 0);
+    }
+  }
 `;

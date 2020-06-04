@@ -12,6 +12,7 @@ import {
 import { useParams } from "react-router-dom";
 import locationSVG from "../../assets/images/location.svg";
 import personSVG from "../../assets/images/person.svg";
+import SideMenu from "../../components/SideMenu";
 
 function UserDetail(props) {
   const { id } = useParams();
@@ -27,6 +28,7 @@ function UserDetail(props) {
   return (
     <>
       <Header />
+      <SideMenu />
       <Container>
         <Card>
           <div className="header">
@@ -52,7 +54,13 @@ function UserDetail(props) {
             </Item>
             <Item>
               <span>Website:</span>
-              <span>{user.website}</span>
+              <span>
+                <a
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  href={`http://${user.website}`}
+                >{`http://${user.website}`}</a>
+              </span>
             </Item>
           </PersonalInfo>
           <a
