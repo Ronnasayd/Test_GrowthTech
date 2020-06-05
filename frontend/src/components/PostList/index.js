@@ -4,17 +4,17 @@ import { Container, List, ListItem, ItemHeader, ItemContent } from "./styles";
 import { client } from "../../services/client";
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
+import { useDocumentReady } from "../../Hooks";
 
 function PostList({ endpoint }) {
   const [posts, setPosts] = useState([]);
   const history = useHistory();
 
-  useEffect(() => {
+  useDocumentReady(() => {
     const elements = document.querySelectorAll(".observer");
     elements.forEach((element) => {
       element.classList.remove("entry");
     });
-
     addObservable(elements);
   });
 

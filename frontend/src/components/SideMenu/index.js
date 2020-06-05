@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Container, ItemMenu } from "./styles";
 import usersSVG from "../../assets/images/group.svg";
 import groupSVG from "../../assets/images/group-chat.svg";
@@ -7,12 +7,11 @@ import { moveSideMenu } from "../../utils";
 import { useHistory } from "react-router-dom";
 
 import ReactTooltip from "react-tooltip";
+import { useDocumentReady } from "../../Hooks";
 
 const SideMenu = () => {
   const history = useHistory();
-  useEffect(() => {
-    moveSideMenu();
-  }, []);
+  useDocumentReady(moveSideMenu);
   return (
     <Container className="side-menu">
       <ReactTooltip place="left" />

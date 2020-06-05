@@ -14,39 +14,33 @@ export const addObservable = (elements) => {
 };
 
 export const addRipple = () => {
-  const interval = setInterval(() => {
-    if (document.readyState === "complete") {
-      clearInterval(interval);
+  const ripples = document.querySelectorAll(".ripple");
 
-      const ripples = document.querySelectorAll(".ripple");
+  ripples.forEach((element) => {
+    element.addEventListener("click", (e) => {
+      element.classList.add("wave");
 
-      ripples.forEach((element) => {
-        element.addEventListener("click", (e) => {
-          let size = element.offsetHeight;
-          if (element.offsetHeight < element.offsetWidth) {
-            size = element.offsetWidth;
-          }
+      let size = element.offsetHeight;
+      if (element.offsetHeight < element.offsetWidth) {
+        size = element.offsetWidth;
+      }
 
-          element.style.setProperty("--width", `${size}px`);
-          element.style.setProperty("--height", `${size}px`);
+      element.style.setProperty("--width", `${size}px`);
+      element.style.setProperty("--height", `${size}px`);
 
-          const positionX =
-            e.clientX - e.currentTarget.getBoundingClientRect().left - size / 2;
-          const positionY =
-            e.clientY - e.currentTarget.getBoundingClientRect().top - size / 2;
+      const positionX =
+        e.clientX - e.currentTarget.getBoundingClientRect().left - size / 2;
+      const positionY =
+        e.clientY - e.currentTarget.getBoundingClientRect().top - size / 2;
 
-          element.style.setProperty("--top", `${positionY}px`);
-          element.style.setProperty("--left", `${positionX}px`);
+      element.style.setProperty("--top", `${positionY}px`);
+      element.style.setProperty("--left", `${positionX}px`);
 
-          element.classList.add("wave");
-
-          element.addEventListener("animationend", (e) => {
-            element.classList.remove("wave");
-          });
-        });
+      element.addEventListener("animationend", (e) => {
+        element.classList.remove("wave");
       });
-    }
-  }, 100);
+    });
+  });
 };
 
 export const moveSideMenu = () => {

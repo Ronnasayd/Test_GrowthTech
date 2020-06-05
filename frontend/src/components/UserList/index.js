@@ -4,24 +4,24 @@ import { Container, List, ListItem } from "./styles";
 import { client } from "../../services/client";
 import { addObservable } from "../../utils";
 import { useHistory } from "react-router-dom";
+import { useDocumentReady } from "../../Hooks";
 
 function UserList() {
   const [users, setUsers] = useState([]);
   const history = useHistory();
 
-  useEffect(() => {
+  useDocumentReady(() => {
     const elements = document.querySelectorAll(".observer");
     elements.forEach((element) => {
       element.classList.remove("entry");
     });
-
     addObservable(elements);
   });
+
   useEffect(() => {
     const getUsers = async () => {
       const response = await client.get("/users/");
       setUsers(response.data);
-      console.log(response);
     };
     getUsers();
   }, []);

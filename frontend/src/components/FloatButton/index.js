@@ -1,10 +1,11 @@
-import React, { useEffect } from "react";
+import React from "react";
 
 import { Container } from "./styles";
 import upImage from "../../assets/images/up48.svg";
+import { useDocumentReady } from "../../Hooks";
 
 function FloatButton() {
-  useEffect(() => {
+  useDocumentReady(() => {
     const footer = document.querySelector(".footer");
     const upButton = document.querySelector(".up-button");
     const observer = new IntersectionObserver((entries) =>
@@ -17,7 +18,7 @@ function FloatButton() {
       })
     );
     observer.observe(footer);
-  }, []);
+  });
   return (
     <a href="#root">
       <Container className="ripple pulse up-button">
