@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.7.1](https://github.com/Ronnasayd/Test_GrowthTech/compare/v1.7.0...v1.7.1) (2020-06-05)
+
+
+### Bug Fixes
+
+* **backend:** fix deploy backend ([0cb5f96](https://github.com/Ronnasayd/Test_GrowthTech/commit/0cb5f96a2689c6e06f7a1bbbfc79c1734ff1e411))
+* **frontend:** fix deploy frontend ([3bc64ae](https://github.com/Ronnasayd/Test_GrowthTech/commit/3bc64ae4e46e8bb3ef994cc730a7255d0d4375b0))
+
 ## [1.7.0](https://github.com/Ronnasayd/Test_GrowthTech/compare/v1.6.1...v1.7.0) (2020-06-05)
 
 
