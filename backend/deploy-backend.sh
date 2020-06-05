@@ -1,2 +1,3 @@
+PORT=80;export PORT
 docker build --tag backend .
-docker run -ti --rm -p 3333:3333 --name backend -d backend
+docker run -ti --rm -p $PORT:$PORT -e PORT=$PORT --name backend -d backend
