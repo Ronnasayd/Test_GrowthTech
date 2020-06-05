@@ -14,4 +14,4 @@ app.use(handleData);
 app.use("/posts", postRouter);
 // Route for users
 app.use("/users", userRouter);
-app.listen(3333);
+app.listen(process.env.PORT || 3333);
