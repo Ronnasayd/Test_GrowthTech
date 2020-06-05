@@ -5,6 +5,8 @@ const postRouter = require("./Routes/postRouter");
 const userRouter = require("./Routes/userRouter");
 const handleData = require("./Middlewares/dataMiddleware");
 
+console.log(`running on port: ${process.env.PORT}\n`);
+
 app.use(cors());
 app.use(express.json());
 
