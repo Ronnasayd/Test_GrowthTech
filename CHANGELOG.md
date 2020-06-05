@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.7.0](https://github.com/Ronnasayd/Test_GrowthTech/compare/v1.6.1...v1.7.0) (2020-06-05)
+
+
+### Features
+
+* **backend:** add heroku deploy ([8b57601](https://github.com/Ronnasayd/Test_GrowthTech/commit/8b576019a30bd95b57c1a22acc06f9b155668600))
+* **frontend:** add hook useDocumentReady ([3e3ab66](https://github.com/Ronnasayd/Test_GrowthTech/commit/3e3ab66ba36abb50c589347395c77c1639c70a78))
+
+
+### Bug Fixes
+
+* **backend:** fix deploy in backend ([7ba59cd](https://github.com/Ronnasayd/Test_GrowthTech/commit/7ba59cdfadf0bee49c63fa5d8d195c1112c182a8))
+
 ### [1.6.1](https://github.com/Ronnasayd/Test_GrowthTech/compare/v1.6.0...v1.6.1) (2020-06-04)
 
 ## [1.6.0](https://github.com/Ronnasayd/Test_GrowthTech/compare/v1.5.0...v1.6.0) (2020-06-04)
