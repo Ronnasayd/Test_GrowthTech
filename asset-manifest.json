@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.js": "./static/js/main.6dd79083.chunk.js",
-    "main.js.map": "./static/js/main.6dd79083.chunk.js.map",
-    "runtime-main.js": "./static/js/runtime-main.3993e964.js",
-    "runtime-main.js.map": "./static/js/runtime-main.3993e964.js.map",
-    "static/js/2.d53f078c.chunk.js": "./static/js/2.d53f078c.chunk.js",
-    "static/js/2.d53f078c.chunk.js.map": "./static/js/2.d53f078c.chunk.js.map",
-    "index.html": "./index.html",
-    "precache-manifest.9a40f3ca05fcef5d816d15430c25ce57.js": "./precache-manifest.9a40f3ca05fcef5d816d15430c25ce57.js",
-    "service-worker.js": "./service-worker.js",
-    "static/js/2.d53f078c.chunk.js.LICENSE.txt": "./static/js/2.d53f078c.chunk.js.LICENSE.txt",
-    "static/media/github.svg": "./static/media/github.be92f76f.svg",
-    "static/media/group-chat.svg": "./static/media/group-chat.59370966.svg",
-    "static/media/group.svg": "./static/media/group.d505e0b4.svg",
-    "static/media/linkedin.svg": "./static/media/linkedin.fea69764.svg",
-    "static/media/location.svg": "./static/media/location.4c3521ef.svg",
-    "static/media/person.svg": "./static/media/person.164bf61d.svg",
-    "static/media/posts.svg": "./static/media/posts.2f3e4597.svg",
-    "static/media/up48.svg": "./static/media/up48.ae1b2382.svg"
+    "main.js": "/Test_GrowthTech/static/js/main.6dd79083.chunk.js",
+    "main.js.map": "/Test_GrowthTech/static/js/main.6dd79083.chunk.js.map",
+    "runtime-main.js": "/Test_GrowthTech/static/js/runtime-main.3bff80ad.js",
+    "runtime-main.js.map": "/Test_GrowthTech/static/js/runtime-main.3bff80ad.js.map",
+    "static/js/2.a2b99f58.chunk.js": "/Test_GrowthTech/static/js/2.a2b99f58.chunk.js",
+    "static/js/2.a2b99f58.chunk.js.map": "/Test_GrowthTech/static/js/2.a2b99f58.chunk.js.map",
+    "index.html": "/Test_GrowthTech/index.html",
+    "precache-manifest.089e05bfa702f101ccf5bfd3b61e6b24.js": "/Test_GrowthTech/precache-manifest.089e05bfa702f101ccf5bfd3b61e6b24.js",
+    "service-worker.js": "/Test_GrowthTech/service-worker.js",
+    "static/js/2.a2b99f58.chunk.js.LICENSE.txt": "/Test_GrowthTech/static/js/2.a2b99f58.chunk.js.LICENSE.txt",
+    "static/media/github.svg": "/Test_GrowthTech/static/media/github.be92f76f.svg",
+    "static/media/group-chat.svg": "/Test_GrowthTech/static/media/group-chat.59370966.svg",
+    "static/media/group.svg": "/Test_GrowthTech/static/media/group.d505e0b4.svg",
+    "static/media/linkedin.svg": "/Test_GrowthTech/static/media/linkedin.fea69764.svg",
+    "static/media/location.svg": "/Test_GrowthTech/static/media/location.4c3521ef.svg",
+    "static/media/person.svg": "/Test_GrowthTech/static/media/person.164bf61d.svg",
+    "static/media/posts.svg": "/Test_GrowthTech/static/media/posts.2f3e4597.svg",
+    "static/media/up48.svg": "/Test_GrowthTech/static/media/up48.ae1b2382.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.3993e964.js",
-    "static/js/2.d53f078c.chunk.js",
+    "static/js/runtime-main.3bff80ad.js",
+    "static/js/2.a2b99f58.chunk.js",
     "static/js/main.6dd79083.chunk.js"
   ]
 }
