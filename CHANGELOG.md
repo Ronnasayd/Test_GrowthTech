@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.7.2](https://github.com/Ronnasayd/Test_GrowthTech/compare/v1.7.1...v1.7.2) (2020-06-05)
+
+
+### Bug Fixes
+
+* **backend:** fix deploy heroku in backend ([604446b](https://github.com/Ronnasayd/Test_GrowthTech/commit/604446bf4827848509e6b9d615019a6b63e778a5))
+* **frontend:** fix url in styles and favicon ([d4da41a](https://github.com/Ronnasayd/Test_GrowthTech/commit/d4da41a20714efd25cbb4f7289142fdea91c6aa3))
+
 ### [1.7.1](https://github.com/Ronnasayd/Test_GrowthTech/compare/v1.7.0...v1.7.1) (2020-06-05)
 
 
