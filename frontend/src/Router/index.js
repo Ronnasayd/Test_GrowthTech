@@ -6,7 +6,7 @@ import UserDetail from "../pages/UserDetail";
 
 function AppRouter() {
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <Switch>
         <Route exact={true} path="/">
           <Posts endpoint={"/posts/"} />

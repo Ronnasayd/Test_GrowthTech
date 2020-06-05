@@ -1,14 +1,13 @@
 import { createGlobalStyle } from "styled-components";
+import Roboto from "../assets/fonts/Roboto-Regular.ttf";
+import Texture from "../assets/images/texture.jpeg";
 
 export const GlobalStyle = createGlobalStyle`
 
 @font-face {
   font-family: Roboto;
-  src: url("/fonts/Roboto-Regular.ttf");
+  src: url(${Roboto});
 }
-
-
-
 *,body,html{
   margin:0;
   padding:0;
@@ -28,7 +27,7 @@ html{
   
 }
 body{
-  background-image: url("/texture.jpeg");
+  background-image: url(${Texture});
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
