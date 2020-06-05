@@ -14,10 +14,17 @@ import locationSVG from "../../assets/images/location.svg";
 import personSVG from "../../assets/images/person.svg";
 import SideMenu from "../../components/SideMenu";
 import Footer from "../../components/Footer";
+import { useDocumentReady } from "../../Hooks";
+import { addRipple } from "../../utils";
 
 function UserDetail(props) {
   const { id } = useParams();
   const [user, setUser] = useState({});
+  useDocumentReady(() => {
+    setTimeout(() => {
+      addRipple();
+    }, 500);
+  });
   useEffect(() => {
     const getUser = async () => {
       const response = await client.get(`/users/${id}/`);
